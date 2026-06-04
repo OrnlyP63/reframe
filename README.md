@@ -39,6 +39,22 @@ Example output:
 **Recommended framing:** Root problem — fix *why* they hesitate, not the form fields. The drop-off is likely a symptom of low perceived value at that point.
 ```
 
+### Another example — a real, everyday problem
+
+> reframe this: our CI pipeline takes 35 minutes, so people stop waiting and merge without watching it
+
+```
+**Problem:** A 35-minute CI run is too slow to wait for, so developers merge without confirming it passed.
+
+1. **Inversion** — How would we design CI so nobody ever trusts it? (slow, flaky, unclear failures — then fix each)
+2. **Root problem** — Is the real issue the 35 minutes, or that a red build doesn't block the merge?
+3. **Zoom in** — Which single stage eats most of those 35 minutes?
+4. **Stakeholder swap** — From a reviewer's view, what would make waiting feel worth it?
+5. **Constraint flip** — What if CI had to finish in 5 minutes — what would we cut, cache, or parallelize?
+
+**Recommended framing:** Root problem — make a failing build actually block the merge. Speed matters, but unenforced CI is the thing causing bad merges, not the duration.
+```
+
 ## Triggers
 
 The skill activates on phrases like "reframe this", "reframe the problem", "other framings", "I'm stuck on X", "look at this differently", or "am I solving the right problem".
