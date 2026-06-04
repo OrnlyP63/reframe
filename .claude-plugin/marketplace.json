@@ -1,0 +1,13 @@
+{
+  "name": "reframe",
+  "owner": {
+    "name": "OrnlyP63"
+  },
+  "plugins": [
+    {
+      "name": "reframe",
+      "source": "./",
+      "description": "Quick problem-reframing skill — turns one problem into 3-5 alternative framings."
+    }
+  ]
+}
