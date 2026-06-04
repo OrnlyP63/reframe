@@ -1,41 +1,39 @@
 ---
 name: reframe
-description: Reframe a stated problem into fresh perspectives and the solutions they unlock, fast. Shifts perspective to attack the root cause instead of the surface symptom, across work, productivity, and personal problems. Use when the user says "reframe this", "reframe the problem", "other framings", "I'm stuck on X", "look at this differently", "am I solving the right problem", or otherwise wants fresh angles and ideas instead of a single direct answer.
+description: Reframe a stated problem into 3-5 fresh perspectives, fast. Shifts perspective to attack the root cause instead of the surface symptom, across work, productivity, and personal problems. Returns perspectives only — no solutions. Use when the user says "reframe this", "reframe the problem", "other framings", "I'm stuck on X", "look at this differently", "am I solving the right problem", or otherwise wants fresh angles on a problem.
 ---
 
 # Reframe
 
-Take one problem and give back fresh perspectives and the solutions they open up
-— fast. Reframing shifts perspective to redefine the issue so you attack the
-root cause, not the surface annoyance. Brainstorming aid, not an interview. Do
-not interrogate the user; work from what they gave you.
+Take one problem and give back 3-5 fresh perspectives on it — fast. Reframing
+shifts perspective to redefine the issue so you attack the root cause, not the
+surface annoyance. Brainstorming aid, not an interview, **not a solver**. Do not
+interrogate the user; work from what they gave you.
 
-**Canonical example — the slow elevator:** "Elevator too slow" (→ expensive: new
-lift) becomes "the wait feels annoying" (→ cheap: add mirrors or music). Same
-facts, far better solution space.
+**Canonical example — the slow elevator:** "Elevator too slow" reframes to "the
+wait feels annoying" — a completely different, cheaper problem to attack. Same
+facts, new lens.
 
 ## Output format
 
-Two sections, nothing else:
+A bare list. Nothing else.
 
 ```
-**New perspectives**
-- <reframed problem statement / new angle, one line>
-- <another, genuinely different angle>
+- <perspective, one line>
+- <perspective, one line>
+- <perspective, one line>
   ... (3-5 total)
-
-**Solutions**
-- <concrete idea unlocked by the perspectives>
-- <another>
-  ... (as many as are useful)
 ```
 
-Do **not** print lens names, a "recommended framing", or the thinking framework.
-Just the perspectives and solutions.
+Hard rules on output:
+- **Perspectives only — never offer solutions, fixes, or implementation ideas.**
+- No `**Problem:**` header, no closing line, no commentary, no lens names.
+- 3-5 bullets, one line each.
+- Mix questions ("What if the real issue is X?") and statements ("This isn't a Y problem, it's a Z problem") — whichever lands harder per line.
 
-## How to generate perspectives (internal — do not show)
+## How to generate perspectives (internal — never show this)
 
-Run the problem through these lenses and keep the 3-5 that yield genuinely
+Run the problem through these lenses, keep the 3-5 that yield genuinely
 different angles:
 
 - Challenge assumptions — what constraint am I treating as fixed? what if the opposite were true?
@@ -47,7 +45,7 @@ different angles:
 - Stakeholder swap — frame it from another party's view (user, boss, customer, future self).
 - Constraint flip — remove the assumed constraint, or add one that forces creativity.
 - Emotional reframe — restate "thing I suffer from" as "objective I can act on".
-- Analogy — what is this like in another domain, and how is it solved there?
+- Analogy — what is this like in another domain?
 
 Works across business, productivity, and personal problems.
 
@@ -55,5 +53,5 @@ Works across business, productivity, and personal problems.
 
 - Speed over ceremony. No multi-turn questioning.
 - Perspectives must be genuinely different — no rephrasing one angle.
-- One line each. If the problem is vague, make best-guess perspectives and note the assumption in one line — never stall to ask.
-- Always end with concrete solutions, not just reframes.
+- One line each. If the problem is vague, make best-guess perspectives anyway — never stall to ask.
+- Stop at perspectives. Do not drift into solutions even if they seem obvious.

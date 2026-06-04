@@ -1,6 +1,6 @@
 # reframe
 
-A Claude Code skill that turns one problem into **3-5 sharper alternative framings** — fast. Reframing shifts your perspective to redefine an issue so you ask better questions and attack the root cause instead of the surface annoyance. It is a brainstorming aid, not a solver: when you're stuck or suspect you're solving the wrong problem, it restates the problem through named lenses (challenge assumptions, how→why, root problem, inversion, broaden context, stakeholder swap, constraint flip, emotional reframe, analogy) and recommends one framing to pursue.
+A Claude Code skill that turns one problem into **3-5 fresh perspectives** — fast. Reframing shifts your perspective to redefine an issue so you ask better questions and attack the root cause instead of the surface annoyance. It is a brainstorming aid, **not a solver**: it gives you new ways to see the problem and deliberately stops short of solutions, so you don't short-circuit your own thinking. Output is a bare list of perspectives — a mix of provocative questions and reframe statements.
 
 ### Why reframe?
 
@@ -36,22 +36,16 @@ Just describe a problem and ask to reframe it:
 
 > reframe this: our onboarding flow has a 40% drop-off at the signup step
 
-Output is two sections — fresh perspectives, then the solutions they unlock. No framework jargon.
+Output is a bare list of perspectives — no headers, no solutions, no jargon.
 
 ```
 > reframe this: our CI pipeline takes 35 minutes, so people stop waiting and merge without watching it
 
-**New perspectives**
-- The real issue may not be the 35 minutes — it's that a red build doesn't block the merge.
-- Trust, not speed: people skip CI because failures are slow, flaky, or unclear.
+- What if the real issue isn't the 35 minutes, but that a red build doesn't block the merge?
+- This is a trust problem, not a speed problem — people skip CI because failures are slow, flaky, or unclear.
 - One stage probably eats most of the 35 minutes; the rest is fine.
-- "Fast enough to wait for" is a different goal than "fast" — what if it had to finish in 5?
-
-**Solutions**
-- Make a failing build actually block merge (branch protection / required check).
-- Profile the pipeline; parallelize or cache the one slow stage.
-- Surface a clear pass/fail status inline on the PR so waiting isn't needed.
-- Split smoke tests (fast, blocking) from the full suite (slow, post-merge).
+- "Fast enough to wait for" is a different goal than "fast" — what would have to be true to finish in 5?
+- Who is CI actually for here — the author, or the next person who has to trust this merge?
 ```
 
 ## Triggers
