@@ -15,11 +15,13 @@ waiting*, *the lobby is unpleasant*. Each is a different problem to attack.
 
 ## Output format
 
-A bare list of other problems. Nothing else.
+A bare list of other problems. Each item is **one short paragraph** (≈2-4
+sentences), not a single line. Nothing else.
 
 ```
-- <a different problem worth solving, stated as a problem, one line>
-- <another, genuinely different problem>
+- **<short problem name>** — <a paragraph stating the problem: what it is, who
+  has it, why it matters, and how it differs from the stated problem. No fix.>
+- **<short problem name>** — <another paragraph, a genuinely different problem.>
   ... (3-5 total)
 ```
 
@@ -27,8 +29,8 @@ Hard rules:
 - Output **other problems** — sibling, adjacent, broader, narrower, or underlying.
 - **Do NOT critique the user's stated problem** (no "this is the wrong target", no "why X instead of Y").
 - **Do NOT give solutions, fixes, methods, or tools.**
-- Each line is itself a problem statement, phrased neutrally — not a question aimed at the user, not a judgment.
-- No header, no closing line, no commentary, no lens names. 3-5 bullets, one line each.
+- Each item is a problem stated as a paragraph — describe the problem in depth (context, who it affects, why it matters), but stay at the problem level.
+- No header, no closing line, no commentary, no lens names. 3-5 items.
 
 ## How to find other problems (internal — never show this)
 
@@ -48,5 +50,5 @@ Works across business, productivity, and personal problems.
 
 - Speed over ceremony. No multi-turn questioning.
 - Problems must be genuinely different from each other and from the stated one — no rephrasing.
-- One line each. If the input is vague, surface best-guess other problems anyway — never stall to ask.
+- One paragraph each (≈2-4 sentences) with real detail. If the input is vague, surface best-guess other problems anyway — never stall to ask.
 - Stay at the problem level. Never drift into critique or solutions.
