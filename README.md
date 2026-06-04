@@ -12,6 +12,15 @@ A Claude Code skill that turns one problem into **3-5 other problems worth solvi
 
 It works on work, productivity, and personal problems alike.
 
+## Two skills
+
+This repo ships two complementary reframing skills:
+
+- **`reframe`** — instant. Give it a problem, get 3-5 other problems back as a list. No back-and-forth.
+- **`ask-to-reframe`** — interactive. It asks one probing question at a time, narrowing your problem until a sharp new perspective emerges, then gives a before→after. Use it when you don't yet know what the real problem is.
+
+Both install together (see below).
+
 ## Install
 
 ### A. As a plugin (recommended)
@@ -23,12 +32,12 @@ It works on work, productivity, and personal problems alike.
 
 ### B. As a plain skill (manual copy)
 
-Copy the `skills/reframe/` folder into your Claude Code skills directory:
+Copy the skill folders into your Claude Code skills directory:
 
-- macOS / Linux: `~/.claude/skills/reframe/`
-- Windows: `%USERPROFILE%\.claude\skills\reframe\`
+- macOS / Linux: `~/.claude/skills/`
+- Windows: `%USERPROFILE%\.claude\skills\`
 
-Restart your session. Confirm with `/skills` (or check the skill list).
+Copy both `skills/reframe/` and `skills/ask-to-reframe/`. Restart your session. Confirm with `/skills` (or check the skill list).
 
 ## Usage
 
@@ -64,9 +73,35 @@ It works on personal and productivity problems too, not just technical ones:
 - **Environment and competing demands** — The hours, place, and surrounding obligations may simply not leave a protected space for deep work. The problem could be that thesis time is the first thing sacrificed whenever anything else appears, rather than a lack of will.
 ```
 
+### Interactive: `ask-to-reframe`
+
+When you don't yet know the real problem, let it interview you — one question at a time:
+
+```
+> /ask-to-reframe I want to grow my YouTube channel
+
+Q: When you say "grow," my guess is you mean more subscribers — but is the
+   thing you actually want reach, income, or something a subscriber count
+   only stands in for?
+> Honestly income. Subs are just what I thought I needed.
+
+Q: So is the problem "not enough subscribers," or "not enough of my existing
+   audience pays me"? My guess: you may already have enough viewers to earn
+   from, just no way they can.
+> ...yeah, I have ~20k views/month and zero ways to pay me.
+
+Q: Then would adding 10k subscribers change anything if none of them could
+   pay you either? My guess: no — the bottleneck is monetization, not size.
+> No, it wouldn't.
+
+**Before:** I want to grow my YouTube channel.
+**After:** The real problem is that my existing 20k monthly viewers have no
+way to pay me — it's a monetization problem, not an audience-size problem.
+```
+
 ## Triggers
 
-The skill activates on phrases like "reframe this", "reframe the problem", "other framings", "I'm stuck on X", "look at this differently", or "am I solving the right problem".
+`reframe` activates on phrases like "reframe this", "other framings", "I'm stuck on X", "look at this differently", or "am I solving the right problem". `ask-to-reframe` activates on "ask to reframe", "interview me about this problem", "narrow this down", or "help me find the real problem".
 
 ## License
 
