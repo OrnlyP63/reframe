@@ -1,8 +1,8 @@
 # reframe
 
-A Claude Code skill that turns one problem into **3-5 other problems worth solving** — fast. Instead of critiquing your problem or jumping to solutions, it surfaces sibling, adjacent, broader, narrower, and underlying problems around the same situation, so you can pick a better one to attack. Each is a short paragraph describing the problem in depth — no critique, no jargon.
+A Claude Code skill that turns one problem into **3-5 other problems** — fast. Instead of critiquing your problem or jumping to solutions, it surfaces sibling, adjacent, broader, narrower, and underlying problems around the same situation. Each is a short paragraph describing the problem in depth — no critique, no solutions, no jargon.
 
-It works in **two steps**: first it reframes into other problems, then — when you pick one by number — it gives concrete solutions for just that problem. You choose the better problem before anyone solves anything.
+It's **recursive**: pick any problem by number and it reframes *that* one deeper into its own sub-problems, and so on as far as you want to drill. It only ever reframes — it never solves — so you keep moving until you find the problem actually worth attacking.
 
 ### Why reframe?
 
@@ -34,7 +34,7 @@ Restart your session. Confirm with `/skills` (or check the skill list).
 
 ## Usage
 
-Just describe a problem and ask to reframe it. **Step 1** returns other problems — each a short paragraph, no critique, no solutions — and ends by asking which one to solve.
+Just describe a problem and ask to reframe it. You get other problems — each a short paragraph, no critique, no solutions — ending by asking which one to drill into.
 
 ```
 > reframe this: our CI pipeline takes 35 minutes, so people stop waiting and merge without watching it
@@ -49,18 +49,23 @@ Just describe a problem and ask to reframe it. **Step 1** returns other problems
 
 5. **Ownership gap** — No one clearly owns the pipeline's health or trusts its result. Flaky or unclear failures erode confidence until the green checkmark stops meaning anything.
 
-_Reply with a number and I'll give solutions for that problem._
+_Reply with a number to reframe that one deeper._
 ```
 
-**Step 2** — pick a number and it solves just that one:
+Pick a number and it reframes *that* problem into its own sub-problems — and you can keep drilling:
 
 ```
 > 2
 
-- Make the CI status a required check on the branch so a red build physically blocks merge.
-- Gate merges in the platform (branch protection / merge queue), not on people remembering to look.
-- Auto-revert or auto-close PRs whose required checks fail, so "ignore it" stops being an option.
-- Make failures loud where the team already is (chat alert tagging the author) so a red build can't be quietly skipped.
+1. **No hard gate exists** — There is no mechanism that can actually stop a merge; the platform permits it regardless of CI state, so enforcement depends entirely on human discipline.
+
+2. **Failures are too noisy to trust** — Flaky and unclear failures train people to treat every red as probably-spurious, so even an enforced gate would be routed around or disabled.
+
+3. **The check isn't the merge's business** — CI runs beside the merge rather than blocking it; the result is information, not a precondition, so "advisory" is the designed behavior, not an accident.
+
+4. **No cost to ignoring it** — Nothing bad happens to the person who merges on red, and nothing good happens to the person who waits, so the incentive points entirely toward skipping.
+
+_Reply with a number to reframe that one deeper._
 ```
 
 It works on personal and productivity problems too, not just technical ones:
