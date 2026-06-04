@@ -1,6 +1,16 @@
 # reframe
 
-A Claude Code skill that turns one problem into **3-5 sharper alternative framings** — fast. It is a brainstorming aid, not a solver: when you're stuck or suspect you're solving the wrong problem, it restates the problem through named lenses (inversion, zoom out/in, stakeholder swap, constraint flip, root problem, analogy) and recommends one framing to pursue.
+A Claude Code skill that turns one problem into **3-5 sharper alternative framings** — fast. Reframing shifts your perspective to redefine an issue so you ask better questions and attack the root cause instead of the surface annoyance. It is a brainstorming aid, not a solver: when you're stuck or suspect you're solving the wrong problem, it restates the problem through named lenses (challenge assumptions, how→why, root problem, inversion, broaden context, stakeholder swap, constraint flip, emotional reframe, analogy) and recommends one framing to pursue.
+
+### Why reframe?
+
+- **Prevents solving the wrong problem** — fix the actual root cause, not the symptom.
+- **Unlocks creativity** — challenges assumptions and blind spots, widening the solution space.
+- **Alters emotional impact** — turns something you *suffer from* into an objective you can *tackle*.
+
+> **The classic example — the slow elevator.** Problem: "the elevator is too slow, tenants complain." Expensive solutions: new lift, faster motor. The reframe: "the *wait* feels annoying." Cheap, better solutions: add mirrors or play music — the wait stops feeling agonizing. Same facts, different question, far better answer.
+
+It works on work, productivity, and personal problems alike.
 
 ## Install
 
