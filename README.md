@@ -36,33 +36,22 @@ Just describe a problem and ask to reframe it:
 
 > reframe this: our onboarding flow has a 40% drop-off at the signup step
 
-Example output:
+Output is two sections — fresh perspectives, then the solutions they unlock. No framework jargon.
 
 ```
-**Problem:** 40% of users abandon onboarding at the signup step.
-
-1. **Inversion** — How would we design signup to guarantee drop-off? (then invert each cause)
-2. **Root problem** — Is the issue signup itself, or that users reach signup unconvinced?
-3. **Stakeholder swap** — What does the user feel at the signup screen that we don't see?
-4. **Constraint flip** — What if signup weren't required before first value?
-
-**Recommended framing:** Root problem — fix *why* they hesitate, not the form fields. The drop-off is likely a symptom of low perceived value at that point.
-```
-
-### Another example — a real, everyday problem
-
 > reframe this: our CI pipeline takes 35 minutes, so people stop waiting and merge without watching it
 
-```
-**Problem:** A 35-minute CI run is too slow to wait for, so developers merge without confirming it passed.
+**New perspectives**
+- The real issue may not be the 35 minutes — it's that a red build doesn't block the merge.
+- Trust, not speed: people skip CI because failures are slow, flaky, or unclear.
+- One stage probably eats most of the 35 minutes; the rest is fine.
+- "Fast enough to wait for" is a different goal than "fast" — what if it had to finish in 5?
 
-1. **Inversion** — How would we design CI so nobody ever trusts it? (slow, flaky, unclear failures — then fix each)
-2. **Root problem** — Is the real issue the 35 minutes, or that a red build doesn't block the merge?
-3. **Zoom in** — Which single stage eats most of those 35 minutes?
-4. **Stakeholder swap** — From a reviewer's view, what would make waiting feel worth it?
-5. **Constraint flip** — What if CI had to finish in 5 minutes — what would we cut, cache, or parallelize?
-
-**Recommended framing:** Root problem — make a failing build actually block the merge. Speed matters, but unenforced CI is the thing causing bad merges, not the duration.
+**Solutions**
+- Make a failing build actually block merge (branch protection / required check).
+- Profile the pipeline; parallelize or cache the one slow stage.
+- Surface a clear pass/fail status inline on the PR so waiting isn't needed.
+- Split smoke tests (fast, blocking) from the full suite (slow, post-merge).
 ```
 
 ## Triggers
